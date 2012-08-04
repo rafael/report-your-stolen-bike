@@ -46,7 +46,7 @@
               <div class="hero-unit">
                 <p> Name: <%= report.owner_name %></p>
                 <p> Email: <%= report.owner_email %></p>
-                <p> Phone Number: <%= report.owner_phone %></p>
+                <p> Phone Number: <%= number_to_phone(report.owner_phone) %></p>
               </div>
             </div>
           </div>
