@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  brand: MyString
+  model: MyString
+  city: MyString
+  country: MyString
+  serial: MyString
+  crime_date: 2012-08-04 01:10:47
+  owner_name: MyString
+  owner_email: MyString
+  owner_phone: MyString
+
+two:
+  brand: MyString
+  model: MyString
+  city: MyString
+  country: MyString
+  serial: MyString
+  crime_date: 2012-08-04 01:10:47
+  owner_name: MyString
+  owner_email: MyString
+  owner_phone: MyString

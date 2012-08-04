@@ -1,0 +1,63 @@
+<div class="row offset1">
+  <div class="span8">
+    <br/>
+    <h1> Stolen Bikes </h1>
+    <form class="well form-search" method="get" action="/reports">
+      <input type="text" class="input-medium search-query" name='search'>
+      <button type="submit" class="btn">Search by Serial</button>
+    </form>
+
+    <div class="row">
+      <div class="span2">
+        <%= link_to 'Show all bikes', reports_path %>
+      </div>
+    </div>
+    <table class="table table-bordered table-striped">
+      <thead>
+        <tr>
+          <th> Brand</th>
+          <th> Model</th>
+          <th> Serial</th>
+          <th> City</th>
+          <th> Country</th>
+          <th> Owner Name</th>
+          <th>&nbsp;</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @reports.each do |report| -%>
+          <tr>
+            <td> <%= report.brand %></td>
+            <td> <%= report.model %></td>
+            <td> <%= report.serial %></td>
+            <td> <%= report.city %></td>
+            <td> <%= report.country %></td>
+            <td> <%= report.owner_name %></td>
+            <td> 
+            <a class="btn" data-toggle="modal" href="#report-<%=report.id%>" >Show Contact Info</a>
+            </td>
+          </tr>
+          <div class="modal hide" id="report-<%=report.id%>">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">×</button>
+              <h3>Report</h3>
+            </div>       
+            <div class="modal-body">
+              <div class="hero-unit">
+                <p> Name: <%= report.owner_name %></p>
+                <p> Email: <%= report.owner_email %></p>
+                <p> Phone Number: <%= report.owner_phone %></p>
+              </div>
+            </div>
+          </div>
+        <% end %>
+      </tbody>
+
+    </table>
+    <div class="row">
+      <div class="span1">
+        <%= link_to 'Go home', root_path %>
+      </div>
+    </div>
+  </div>
+</div>

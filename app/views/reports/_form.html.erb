@@ -1,0 +1,32 @@
+<div class= "row offset1"> 
+  <div class="span8">
+    <h1> Report your bike </h1>
+    <div class="well">
+      <%= format_message_errors_for @report %>
+      <%= form_for @report do |f| -%>
+        <%= f.label :owner_name %>
+        <%= f.text_field :owner_name %>
+        <%= f.label :owner_email %>
+        <%= f.text_field :owner_email %>
+        <%= f.label :owner_phone %>
+        <%= f.text_field :owner_phone %>
+        <%= f.label :brand %>
+        <%= f.text_field :brand %>
+        <%= f.label :country %>
+        <%= f.text_field :country %>
+        <%= f.label :city %>
+        <%= f.text_field :city %>
+        <%= f.label :serial %>
+        <%= f.text_field :serial %>
+        <%= f.label :crime_date %>
+        <%= f.date_select :crime_date %>
+        <p>
+        <%= f.submit :class => 'btn btn-success'%>
+        </p>
+      <% end -%>
+      <p>
+      <%= link_to "Go Home", root_path %>
+      </p>
+    </div>
+  </div>
+</div>

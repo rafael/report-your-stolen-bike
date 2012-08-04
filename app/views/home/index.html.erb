@@ -1,0 +1,36 @@
+<div class="row">
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+</div>
+<div class="row">
+  <div class="offset3 span6">
+    <div class="hero-unit">
+      <h2> What is this all about? </h2> 
+      <p> Well, my name is <%= link_to 'Rafael Chacón', 'http://www.rafael-chacon.com', :target => "_blank" %>  and my bike got stolen on July 31 2012.
+      I was trying to find an easy way to report stolen bikes on the internet and I couldn't find it.
+      So here is an attempt to propose a solution to that problem. Through this site you could report or check if a bike was stolen very easily.</p>
+    </div>
+  </div>
+</div>
+<div class="row">
+
+  <div class="offset3 span6">
+  <div class="well">
+    <div class="row">
+      <div class="offset1">
+      <div class="span2">
+        <%= link_to 'Check a bike', reports_path,  :class => 'btn btn-primary' %>
+      </div>
+      <div class="span2">
+        <%= link_to 'Report a bike', new_report_path, :class => 'btn btn-primary' %> 
+      </div>
+    </div>
+    </div>
+  </div>
+</div>
