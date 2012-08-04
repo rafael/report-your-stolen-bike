@@ -2,9 +2,9 @@ class ReportsController < ApplicationController
 
   def index
     if params[:search]
-      @reports = Report.search("%#{params[:search]}%")
+      @reports = Report.search("%#{params[:search]}%").order('crime_date DESC')
     else
-    @reports = Report.all
+    @reports = Report.order('crime_date DESC')
     end
   end
 
